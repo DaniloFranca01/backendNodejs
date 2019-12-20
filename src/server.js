@@ -1,6 +1,6 @@
-const express = require('express');
+import express, { json } from 'express';
+import routes from './routes';
+
 const app = express();
-app.get('/', (req, res) =>{
-    return res.send('Hello World')
-});
+app.use(json());
 app.listen(3333);
